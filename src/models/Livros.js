@@ -1,5 +1,6 @@
 
 import mongoose from "mongoose";
+import { autorSchema } from "./Autor.js"
 
 //definir quais serao os tipos e as propriedades de um livro
 const livroSchema = new mongoose.Schema({
@@ -7,7 +8,8 @@ const livroSchema = new mongoose.Schema({
     titulo: {type: String , required: true},
     editora: {type: String },
     preco: {type: Number},
-    paginas: {type: Number}
+    paginas: {type: Number},
+    autor: autorSchema
 
 }, {versionKey: false}) ;
 
